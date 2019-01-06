@@ -128,6 +128,25 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
+                      Align(
+                        alignment: Alignment.bottomCenter,
+                        child: new Container(
+                          height: 48.0,
+                          width: 120.0,
+                          decoration: new BoxDecoration(
+                              color: Colors.black87,
+                              borderRadius: new BorderRadius.all(
+                                  new Radius.circular(24.0))),
+                          alignment: Alignment.center,
+                          child: new Text(
+                            "NEXT",
+                            style: new TextStyle(
+                                color: Colors.white54,
+                                fontSize: 14.0,
+                                letterSpacing: 1.0),
+                          ),
+                        ),
+                      )
 
                     ],
                   )),
