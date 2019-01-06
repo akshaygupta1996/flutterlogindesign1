@@ -44,14 +44,35 @@ class _LoginPageState extends State<LoginPage> {
               new Flexible(flex: 6, child: new Container()),
               new Flexible(
                   flex: 5,
-                  child: Padding(
-                    padding: const EdgeInsets.all(24.0),
-                    child: ClipPath(
-                      clipper: LoginContainerClipper(),
-                      child: new Container(
-                        color: Colors.black54,
+                  child: Stack(
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.all(24.0),
+                        child: ClipPath(
+                          clipper: LoginContainerClipper(),
+                          child: new Container(
+                            color: Colors.black54,
+                          ),
+                        ),
                       ),
-                    ),
+                      Align(
+                        alignment: Alignment.topCenter,
+                        child: new Container(
+                          margin: new EdgeInsets.only(top: 24.0),
+                          padding: new EdgeInsets.all(12.0),
+                          height: 80.0,
+                          width: 80.0,
+                          decoration: new BoxDecoration(
+                              color: Colors.black54,
+                              borderRadius: new BorderRadius.all(
+                                  new Radius.circular(40.0))),
+                          child: new Image.asset(
+                            "assets/profile.png",
+                            alignment: Alignment.center,
+                          ),
+                        ),
+                      ),
+                    ],
                   )),
               new Flexible(
                   flex: 2,
