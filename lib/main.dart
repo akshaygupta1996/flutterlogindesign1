@@ -52,6 +52,62 @@ class _LoginPageState extends State<LoginPage> {
                           clipper: LoginContainerClipper(),
                           child: new Container(
                             color: Colors.black54,
+                            child: Column(
+                              mainAxisAlignment:
+                              MainAxisAlignment.center,
+                              children: <Widget>[
+                                Padding(
+                                  padding:
+                                  const EdgeInsets.only(top: 48.0),
+                                  child: TextField(
+                                    style: new TextStyle(
+                                        color: Colors.white54),
+                                    textAlign: TextAlign.center,
+                                    keyboardType:
+                                    TextInputType.emailAddress,
+                                    decoration: InputDecoration(
+                                        border: InputBorder.none,
+                                        hintStyle: new TextStyle(
+                                            color: Colors.white54,
+                                            letterSpacing: 1.0),
+                                        hintText: 'Enter your email'),
+                                  ),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.only(
+                                      left: 18.0, right: 18.0),
+                                  child: new Divider(
+                                    height: 1.0,
+                                    color: Colors.white54,
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                  const EdgeInsets.only(top: 24.0),
+                                  child: new Row(
+
+                                    mainAxisAlignment:
+                                    MainAxisAlignment.center,
+                                    children: <Widget>[
+                                      new Image.asset(
+                                        "assets/googlelogo.png",
+                                        height: 24.0,
+                                        width: 24.0,
+                                      ),
+                                      new Container(
+
+                                        width: 30.0,
+                                      ),
+                                      new Image.asset(
+                                        "assets/facebooklogo.png",
+                                        height: 24.0,
+                                        width: 24.0,
+                                      ),
+                                    ],
+                                  ),
+                                )
+                              ],
+                            ),
                           ),
                         ),
                       ),
@@ -72,6 +128,7 @@ class _LoginPageState extends State<LoginPage> {
                           ),
                         ),
                       ),
+
                     ],
                   )),
               new Flexible(
