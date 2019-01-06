@@ -44,8 +44,14 @@ class _LoginPageState extends State<LoginPage> {
               new Flexible(flex: 6, child: new Container()),
               new Flexible(
                   flex: 5,
-                  child: new Container(
-                    color: Colors.black54,
+                  child: Padding(
+                    padding: const EdgeInsets.all(24.0),
+                    child: ClipPath(
+                      clipper: LoginContainerClipper(),
+                      child: new Container(
+                        color: Colors.black54,
+                      ),
+                    ),
                   )),
               new Flexible(
                   flex: 2,
@@ -63,4 +69,21 @@ class _LoginPageState extends State<LoginPage> {
       ),
     );
   }
+}
+
+class LoginContainerClipper extends CustomClipper<Path> {
+  @override
+  Path getClip(Size size) {
+    var path = Path();
+
+    path.moveTo(size.width, 0.0);
+    path.lineTo(size.width, size.height);
+    path.lineTo(0.0, size.height);
+    path.lineTo(0.0, size.height / 3);
+    path.close();
+    return path;
+  }
+
+  @override
+  bool shouldReclip(CustomClipper<Path> oldClipper) => false;
 }
