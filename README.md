@@ -1,8 +1,6 @@
 # flutterblog2
 
-Login UI Design
+Login UI Design Blog Post
 
-## Getting Started
-
-For help getting started with Flutter, view our online
-[documentation](https://flutter.io/).
+For More blogs and cheat sheets on flutter visit
+www.codewithakshay.com
